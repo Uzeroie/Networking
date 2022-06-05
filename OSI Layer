@@ -1,10 +1,53 @@
 OSI stands for Open System Interconnection Layers. It communicates diffrent computers or end devices. It is not mostly these days since TCP model is more relaiable.
 It has 7 layers and all of these layers have their own functions. 
+
 PDNTSPA or APSTNDP
+
 Layer 7 is Application Layer - It is the layer where the end users interact directly with software. It also recives data directly from the user and displays the recuired data to the end users. for example : google, MS word etc. The layer itself doesnot consist of software it only helps in communication.
+
 Layer 6 is Presentation Layer - Presentation Layer prepares and presents data to application layer. It helps in encoding, encrypting and compressing data to send the data to other end without any error.
+
 Layer 5 is Session Layer - When any two end devices need to communicate with each other a session is created and it is created in session layer. It first opens session for communication ensures they remain open throoughout the data transfer and also closes them when the session ends. 
+
 Layer 4 is Transport Layer - This layer transports the data from end devices to servers and back. Its main purpose is to transmit important data check error in data and also see the size of data speed ofdata flow etc. Its example is TCP (Transmission Control Protocol) 
+
 Layer 3 is Network Layer - This layer is solely responsible for traffic forwarding and it also connects diffrent routers. This layer contains most of the functioning of the router. The Network layer finds the destination of end devices using IP address.
+
 Layer 2 is Data-Link Layer - Data-Link layer connects two node devices. Node devices are called end devices some examples of nodes are routers, pcs, printers etc. It also corrects errors of Physical layer. It has 2 sub layers they are: LLC (Logical Link Control) - It provides flow and error control throughout physical Layer and It also Identifies line portocol. MAC (Media Access Control) - It uses MAC address to connect the end devices and also control permission on Transmission and recival of data.
+
 Layer 1 is Physical Layer - Physical layer is the bottom of the OSI Layer/Model. It connects computers or network physically using wirecables. It transmits raw data in the form of 0 and 1. It can include wires, wifi, pins, voltage etc. When there is any sort of network problem, the experts check the phyical layer first to see if all the wires are connected throughly or not. 
+
+
+Data Encapsulation means adding additional data while the data is travelling in between the layers. The additional information is added on senders side
+
+Encapsulation process::::::::::::::
+
+Throughout the Applicaion layer, Presentation layer and Session layer No additional data is added in the user's data.
+The session layer then send the data to Transportation layer
+In the transportation layer the data is divided into different parts and each part is given a different heading named as source port, destination port, sequence number etc. The encapsulated data in this layer is known as segments or datagram depending on which transmission model is being used. Here header is called Layer 4
+The segemnts are then transferred into Network layer where new headers like source IP, Destination IP etc are added and The segments are now called as Packets Header is also called Layer 3
+Now that the data reaches Data-Link Layer a new header called Layer 2 is added which consists of source MAC address, destination MAC address etc. And the encapsulated Packets are now called Frames.
+Now after the frames passes to Physical layer The encapsulated data is now called Bits.
+This is the total process of Encapsulation
+
+
+Terminologies:::::::::::::
+
+PDU - PDU stands for Portocol Data Unit. While the data encapsuilation takes place the data passes from one layer to another for encapsulation and during this process of encapsulation the encapsulated data are named differently and it is called PDU.
+In application, Presentation and Session layer it is called DATA
+In Transportation layer it is called SEGEMENTS
+In Network layer it is called PACKETS
+In Data-Link layer it is called FRAMES
+And Finally in Physical Layer it is called BITS -------------------------------- it (Encapsulated data)
+
+
+Data De-encapsulation means extracting the encapsulated data to its original form. The additional information that was added while passing through each layer now gets removed through de-encapsulation.
+
+De-encapsulation Process::::::::::::::
+Here, the physical layer gets the BITS de-encapsulates them and sends them to data-link layer as FRAMES.
+The FRAMES received by data-link layer is now checked to see if the destination MAC address and other information matches only then is the data de-encapsulated.
+The Network-Layer then receives the PACKETS and and checks the IP address and after it matches it removes the Layer 3 headers and sends it to transportation layer.
+Now the transportation layer receives the segments removes the Layer 4 headers and passes it to Session layer.
+The data then passses through Session layer, Presentation layer and Application layer without any de-encapsulation since no encapsulation took place in these layers.
+This is the ptocess of De-encapsulation.
+
