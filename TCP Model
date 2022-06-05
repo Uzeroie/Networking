@@ -1,1 +1,5 @@
-
+TCP stands for Transmission Control Protocol. It enables computers to exchange messages over a network. It is more reliable than OSI Layer and doesnot have strict boundaries. 
+network access L- It handles and transmits data from one layer to other. It is the combination of data link layer and physical layer. 
+Internet Layer - It is also known as Network layer. It transfers data throughout the network / It is responsible for sending packets and controlling its movements throughout the network.
+Transportation Layer - It is responsible for end to end communication. It is also combined of OSI layer's session layer so it starts, controls and ends the communication required.
+Application Layer - Application layer helps in communication of end devices. Its protocols are telnet, dns, http, 
