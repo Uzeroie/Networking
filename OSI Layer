@@ -1,4 +1,4 @@
-OSI stands for Open System Interconnection Layers. It communicates diffrent computers or end devices. It is not used these days since TCP model is into practice these days.
+OSI stands for Open System Interconnection Layers. It communicates diffrent computers or end devices. It is not mostly these days since TCP model is more relaiable.
 It has 7 layers and all of these layers have their own functions. 
 PDNTSPA or APSTNDP
 Layer 7 is Application Layer - It is the layer where the end users interact directly with software. It also recives data directly from the user and displays the recuired data to the end users. for example : google, MS word etc. The layer itself doesnot consist of software it only helps in communication.
